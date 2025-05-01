@@ -62,3 +62,17 @@ function hideSearch() {
   searchDelayEls.reverse()
   searchInputEl.value = '' // 검색창 초기화.
 }
+
+//요소의 가시성 관찰
+const io = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      return
+    }
+    entry.target.classList.add('show')
+  })
+})
+const infoEls = document.querySelectorAll('.info')
+infoEls.forEach(el => {
+  io.observe(el)
+})
