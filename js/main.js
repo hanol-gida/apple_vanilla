@@ -30,6 +30,7 @@ const searchWrapEl = headerEl.querySelector('.search-wrap')
 const searchStarterEl = headerEl.querySelector('.search-starter')
 const searchCloserEl = searchWrapEl.querySelector('.search-closer')
 const searchShadowEl = searchWrapEl.querySelector('.shadow')
+const searchInputEl = searchWrapEl.querySelector('input')
 const searchDelayEls = [...searchWrapEl.querySelectorAll('li')]
 
 searchStarterEl.addEventListener('click', showSearch)
@@ -45,6 +46,9 @@ function showSearch() {
   searchDelayEls.forEach((el, index) => {
     el.style.transitionDelay = index * .4 / searchDelayEls.length + 's'
   })
+  setTimeout(() => {
+    searchInputEl.focus() // 검색창에 포커스 주기.
+  }, 600);
 }
 function hideSearch() {
   headerEl.classList.remove('searching')
@@ -56,4 +60,5 @@ function hideSearch() {
     el.style.transitionDelay = index * .4 / searchDelayEls.length + 's'
   })
   searchDelayEls.reverse()
+  searchInputEl.value = '' // 검색창 초기화.
 }
