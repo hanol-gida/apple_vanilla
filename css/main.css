@@ -1,3 +1,4 @@
+/* Common */
 html {
   --color-white: #FFF;
   --color-black: #000;
@@ -35,6 +36,7 @@ img {
 p {
   line-height: 1.6;
 }
+
 /* Inner */
 .inner {
   max-width: 980px;
@@ -42,6 +44,7 @@ p {
   padding: 0 20px;
   position: relative;
 }
+
 /* Btn */
 .btn {
   display: flex;
@@ -64,6 +67,7 @@ p {
 .btn:focus {
   box-shadow: 0 0 0 4px var(--color-link-focus);
 }
+
 /* Background Image Text */
 .bgtext {
   text-indent: -9999px;
@@ -72,6 +76,7 @@ p {
   background-position: center;
   background-size: contain;
 }
+
 /* Links */
 .links {
   display: flex;
@@ -89,9 +94,15 @@ a.link:hover {
 a.link::after {
   content: " >";
 }
+/* Feature */
+.feature {
+  display: flex;
+}
+
 /* Figures */
 .figures {
   position: relative;
+  flex-grow: 1;
 }
 .figures figure,
 .figures figcaption {
@@ -104,6 +115,36 @@ a.link::after {
   top: 0;
   left: 0;
 }
+
+Infos
+.infos {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+}
+.infos.infos--center {
+  justify-content: center;
+}
+.infos.infos--end {
+  justify-content: flex-end;
+}
+.info {
+  max-width: 330px;
+  margin-bottom: 24px;
+}
+.info .icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 0 -15px -30px;
+  background-image: url("../images/sprite_apps.png");
+}
+.info p {
+  font-size: 21.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
 /* Header */
 header {
   --header-height: 44px;
@@ -427,4 +468,55 @@ nav .menu > li.active:hover > a {
 }
 .hero .links {
   margin-top: 30px;
+}
+
+/* Power */
+.power {
+  margin: 100px;
+}
+.power .multiple-apps h1 {
+  width: 500px;
+  height: 280px;
+  background-image: url("../images/power_headline.png");
+  transform: translate(104px, 0);
+}
+.power .multiple-apps .figures {
+  height: 773px;
+}
+.power .multiple-apps figcaption {
+  width: 138px;
+  height: 46px;
+  background-image: url("../images/power_multiple_apps_caption.png");
+  transform: translate(703px, -47px);
+}
+/* Power / Arcade */
+.power .arcade {
+  margin-top: 55px;
+}
+.power .arcade .figures {
+  height: 600px;
+}
+.power .arcade figure {
+  transform: translate(-347px, -90px);
+}
+.power .arcade figcaption {
+  width: 150px;
+  height: 77px;
+  background-image: url("../images/power_arcade_caption.png");
+  transform: translate(483px, 653px);
+}
+.power .create {
+  margin-top: 55px;
+}
+.power .create .figures {
+  height: 772px;
+}
+.power .create figure {
+  transform: translate(0px, 50px);
+}
+.power .create figcaption {
+  width: 142px;
+  height: 46px;
+  background-image: url("../images/power_create_caption.png");
+  transform: translate(543px, 908px);
 }
