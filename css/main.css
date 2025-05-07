@@ -934,6 +934,7 @@ nav .menu > li.active:hover > a {
 .accessibility figure {
   transform: translate(470px, -620px);
 }
+
 /* AR */
 .ar {
   padding: 20px 20px 0;
@@ -950,6 +951,7 @@ nav .menu > li.active:hover > a {
   margin-top: 60px;
   margin-right: 90px;
 }
+
 /* Environment */
 .environment {
   padding: 20px 20px 0;
@@ -962,6 +964,30 @@ nav .menu > li.active:hover > a {
 }
 .environment h1 {
   color: #03A10E;
+}
+
+/* Accessory Shop */
+.accessory-shop {
+  background-color: var(--color-section);
+  text-align: center;
+}
+.accessory-shop .whitebox {
+  padding-bottom: 0;
+}
+.accessory-shop .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.accessory-shop img {
+  margin-top: 50px;
+}
+
+/* Trade */
+.trade {
+  padding: 20px 20px 0;
+  background-color: var(--color-section);
+  text-align: center;
 }
 
 @keyframes sprite-icon {
